@@ -602,5 +602,52 @@ footer p
     margin: 0 0 8px 0;
 }
 
+footer a
+{
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+
+}
 
 
+
+footer .follow
+{
+    margin-top: 20px;
+}
+
+
+footer .follow i
+{
+    color: #465b52;
+    margin-right: 10px;
+    font-size: 22px;
+    transition: .6s ease-in;
+    cursor: pointer;
+}
+
+footer .follow i:hover
+{
+    color: #041e42;
+}
+
+
+footer .install .row img
+{
+    border: 1px solid #088178;
+    border-radius: 6px;
+}
+
+
+footer .install img
+{
+    margin: 15px;
+}
+
+footer .copyright
+{
+    width: 100%;
+    text-align: center;
+}
