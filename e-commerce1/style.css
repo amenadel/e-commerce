@@ -150,6 +150,11 @@ body
     left: 20px;
 }
 
+#close
+{
+    display: none;
+}
+
 
 
 .mobile
@@ -709,6 +714,7 @@ footer .copyright
 
     #close
     {
+        display: block;
         position: absolute;
         top: 30px;
         left: 30px;
