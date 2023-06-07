@@ -212,7 +212,6 @@ body
     
 }
 
-
 #feature .fe-box
 {
    width: 180px; 
@@ -361,7 +360,6 @@ body
 
 }
 
-
 #banner
 {
     display: flex;
@@ -383,7 +381,6 @@ body
 
 }
 
-
 #banner h2
 {
     color: #fff;
@@ -391,19 +388,16 @@ body
     padding: 10px 0;
 }
 
-
 #banner h2 span
 {
     color: #ef3636;
 }
-
 
 #banner .banner-box:hover button
 {
     background-color: #088178;
     color: #acbfd5;
 }
-
 
 #sm-banner
 {
@@ -434,7 +428,6 @@ body
     background-size: cover;
     background-position: center;
 }
-
 
 #banner3
 {
@@ -478,11 +471,6 @@ body
     font-size: 15px;
     color: #ec544e;
 }
-
-
-
-
-
 
 #sm-banner h4
 {
@@ -897,7 +885,201 @@ footer .copyright
     z-index: -2;
 }
 
+/* About section */
 
+#page-header.about-page
+{
+    background-image: url("img/about/banner.png");
+    background-position: top center;
+}
+
+#about-head
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-head .about-box
+{
+    width: 50%;
+    padding: 40px 30px 30px 30px;
+}
+
+#about-head img
+{
+    width: 50%;
+    height: auto;
+}
+
+.marquee-container {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .marquee-container p {
+    animation: marquee 28s linear infinite;
+    white-space: nowrap;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+#about-app
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about-app .video
+{
+    width: 70%;
+    height: 100%;
+    margin-top: 30px;
+}
+
+
+#about-app .video video
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+  
+/* Contact page*/
+
+#contact-details
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.details
+{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.details span,
+form span
+{
+    font-size: 28px;
+    font-weight: 700;
+    color: #15988f;
+    
+}
+
+.details h3,
+form h2
+{
+    color: #465b52;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.details li 
+{
+    list-style: none;
+}
+
+.details i 
+{
+    font-size: 22px;
+    color: #15988f;
+    font-weight: 800;
+}
+
+.details p 
+{
+    font-size: 16px;
+}
+
+
+/* Form */
+
+#form-details 
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 80px;
+    border: 1px solid #e1e1e1;
+}
+
+#form-details form
+{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#form-details form input,
+#form-details form textarea
+
+{
+    width: 100%;
+    padding: 12px 24px;
+    outline: none;
+    margin-bottom: 20px;
+    border: 1px solid #e1e1e1;
+}
+
+
+#form-details form button
+{
+    background-color: #088178;
+    padding: 15px 30px;
+    color: white;
+}
+
+#form-details .people
+{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+#form-details .people div
+{
+    padding-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+}
+
+#form-details .people div img
+{
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+#form-details .people div p 
+{
+    margin: 0;
+    font-size: 13px;
+    line-height: 25px;
+}
+
+#form-details .people div p span
+{
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
 
 
 /*Cart Media query*/
@@ -1025,6 +1207,32 @@ footer .copyright
         
         width: 70%;
     }
+
+
+    /*  Contact Page  */
+
+    #form-details
+    {
+        padding: 40px;
+    }
+
+    #form-details form 
+    {
+        width: 50%;
+    }
+
+    #contact-details
+    {
+        flex-direction: column;
+    }
+
+    #form-details .details
+    {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+   
 
 }
 
@@ -1159,5 +1367,63 @@ footer .copyright
         width: 100%;
     }
 
+
+    /*About Page*/
+
+    #about-head
+    {
+      flex-direction: column;
+    }
+
+    #about-head img 
+    {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+
+    #about-head .about-box 
+    {
+        width: 100%;
+    }   
+
+    #contact-details
+    {
+        flex-direction: column;
+        margin-bottom: 100px;
+    }
+
+    #contact-details .details
+    {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+
+    #contact-details .map 
+    {
+        width: 100%;
+        height: 400px;
+    }
+
+    .map iframe
+    {
+        width: 100%;
+    }
+
+    /* Form */
+
+    #form-details
+    {
+        flex-direction: column;
+    }
+
+    #form-details form 
+    {
+        width: 100%;
+        margin-bottom: 40px;
+
+        
+    }
 
 }
