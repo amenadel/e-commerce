@@ -598,7 +598,7 @@ width: 170px;
 
 .qualification__button
 {
-  font-size: var(--big-font-size);
+  font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
   cursor: pointer;
 }
@@ -615,11 +615,145 @@ width: 170px;
   margin-right: var(--mb-0-25);
 }
 
-
-.qualification__data {
+.qualification__data
+{
   display: grid;
-  grid-template-columns: 1fr max-content 1fr;
-  column-gap: 1rem;
-  grid-auto-flow: row dense;
+  grid-template-columns: 5fr max-content 5fr;
+  column-gap: 1.5rem;
 }
 
+.qualification__title
+{
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+}
+
+
+.qualification__subtitle
+{
+  display: inline-block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-1);
+}
+
+.qualification__calendar
+{
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+}
+
+.qualification__rounder
+{
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background-color: var(--first-color);
+  border-radius: 50%;
+
+}
+
+
+.qualification__line
+{
+  display:block;
+  width: 1px;
+  height: 100%;
+  background-color: var(--first-color);
+  transform: translate(6px, -7px);
+}
+
+.qualification [data-content]
+{
+  display: none;
+}
+
+.qualification__active[data-conte]
+{
+  display: block;
+}
+
+
+
+
+
+/*
+
+
+
+.qualification__data
+{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  transition: ease-in-out.3s;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.qualification__data:hover
+{
+  background-color: #3fb35c36;
+}
+
+
+
+.qualification__data:nth-child(odd) {
+  float: left;
+  width: 50%;
+  clear: both;
+}
+
+.qualification__data:nth-child(even) {
+  float: right;
+  width: 50%;
+  clear: both;
+}
+
+
+.dash
+{
+  background-color: var(--first-color);
+  width: 3px;
+  height: 90%;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+ 
+}
+
+
+.qualification__title
+{
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+}
+
+.qualification__subtitle
+{
+  display: inline-block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-1);
+}
+
+.qualification__calendar
+{
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+}
+
+.qualification__rounder {
+  position: absolute;
+  right: 50%;
+  left: 50%;
+  transform: translateX(-42%);
+  width: 13px;
+  height: 13px;
+  background-color: var(--first-color);
+  border-radius: 50%;
+  margin-top: auto;
+  margin-right: auto;
+  
+}
+*/
