@@ -389,6 +389,27 @@ width: 170px;
   align-items: center;
 }
 
+.button--small{
+ padding: .75rem 1rem;
+}
+
+.button--link
+{
+  padding: 0;
+  background-color: transparent;
+  color: var(--first-color);
+}
+
+.button--link:hover
+{
+  background-color: transparent;
+  color: var(--first-color-alt);
+}
+
+
+/*==================ABOUT ===================*/
+
+
 .about__img
 {
   width: 200px;
@@ -593,8 +614,8 @@ width: 170px;
   display: flex;
   justify-content: space-evenly;
   margin-bottom: var(--mb-2);
-
 }
+
 
 .qualification__button
 {
@@ -603,11 +624,11 @@ width: 170px;
   cursor: pointer;
 }
 
-
 .qualification__button:hover
 {
   color: var(--first-color);
 }
+
 
 .qualification__icon
 {
@@ -618,7 +639,7 @@ width: 170px;
 .qualification__data
 {
   display: grid;
-  grid-template-columns: 5fr max-content 5fr;
+  grid-template-columns: 1fr max-content 1fr;
   column-gap: 1.5rem;
 }
 
@@ -628,12 +649,10 @@ width: 170px;
   font-weight: var(--font-medium);
 }
 
-
-.qualification__subtitle
+.qualification__subtitle 
 {
   display: inline-block;
   font-size: var(--small-font-size);
-  margin-bottom: var(--mb-1);
 }
 
 .qualification__calendar
@@ -642,6 +661,7 @@ width: 170px;
   color: var(--text-color-light);
 }
 
+
 .qualification__rounder
 {
   display: inline-block;
@@ -649,13 +669,11 @@ width: 170px;
   height: 13px;
   background-color: var(--first-color);
   border-radius: 50%;
-
 }
-
 
 .qualification__line
 {
-  display:block;
+  display: block;
   width: 1px;
   height: 100%;
   background-color: var(--first-color);
@@ -667,93 +685,90 @@ width: 170px;
   display: none;
 }
 
-.qualification__active[data-conte]
+
+.qualification__active[data-content]
 {
   display: block;
 }
 
-
-
-
-
-/*
-
-
-
-.qualification__data
+.qualification__button.qualification__active
 {
-  display: flex;
-  align-items: center;
+  color: var(--first-color);
+}
+
+
+
+/*========SERVICES========*/
+
+.services__container
+{
   gap: 1.5rem;
-  justify-content: center;
-  align-items: center;
-  transition: ease-in-out.3s;
-  padding: 10px;
-  border-radius: 5px;
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.qualification__data:hover
+.services__content
 {
-  background-color: #3fb35c36;
+  position: relative;
+  background-color: var(--container-color);
+  padding: 3.5rem .5rem 1.25rem 1.5rem;
+  border-radius: .25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
+  transition: .3s;
 }
 
-
-
-.qualification__data:nth-child(odd) {
-  float: left;
-  width: 50%;
-  clear: both;
-}
-
-.qualification__data:nth-child(even) {
-  float: right;
-  width: 50%;
-  clear: both;
-}
-
-
-.dash
+.services__content:hover
 {
-  background-color: var(--first-color);
-  width: 3px;
-  height: 90%;
-  position: absolute;
-  left: 50%;
-  right: 50%;
- 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .15);
 }
 
-
-.qualification__title
+.services__icon
 {
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-medium);
-}
-
-.qualification__subtitle
-{
-  display: inline-block;
-  font-size: var(--small-font-size);
+  display: block;
+  font-size: 1.5rem;
+  color: var(--first-color);
   margin-bottom: var(--mb-1);
 }
 
-.qualification__calendar
+.service__title
 {
-  font-size: var(--smaller-font-size);
-  color: var(--text-color-light);
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-1);
+  font-weight: var(--font-medium);
 }
 
-.qualification__rounder {
-  position: absolute;
-  right: 50%;
-  left: 50%;
-  transform: translateX(-42%);
-  width: 13px;
-  height: 13px;
-  background-color: var(--first-color);
-  border-radius: 50%;
-  margin-top: auto;
-  margin-right: auto;
-  
+.services__button
+{
+  cursor: pointer;
+  font-style: var(--small-font-size);
+
 }
-*/
+
+.services__button:hover .button__icon
+{
+  transform: translateX(.25rem);
+}
+
+.services__modal
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  z-index: var(--z-modal);
+  /*opacity: 0; */
+  /*visibilty:hidden */
+  transition: .3s;
+}
+
+
+.services__modal-content
+{
+  position: relative;
+  background-color: var(--container-color);
+}
