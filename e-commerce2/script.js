@@ -109,3 +109,40 @@ modalCloses.forEach((modalClose) =>{
   })
 })
 
+
+/*=========Portifolio swiper =======*/
+
+
+var swiperPortifolio = new Swiper(".portifolio__container", {
+  cssMode: true,
+  loop:true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+/*=========Testimonial swiper =======*/
+
+var swiperTestimunial = new Swiper(".testimonial__container", {
+  loop:true,
+  grabCursor:true,
+ 
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  breakpoints:
+  {
+    568:
+    {
+      slidesPerView: 2,
+    }
+  }
+});
+
