@@ -26,7 +26,7 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list grid" >
                     <li class="nav__item">
-                        <a href="#home" class="nav__link">
+                        <a href="#home" class="nav__link active-link">
                             <i class="uil uil-estate nav__icon"></i> Home
                         </a>
                     </li>
@@ -59,6 +59,9 @@
                 </ul>
             </div>
             <div class="nav__btns">
+                <!-- Theme change button -->
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
+
                 <div class="nav__toggle" id="nav-toggle">
                     <i class="uil uil-apps"></i>
                 </div>
@@ -337,7 +340,7 @@
         </section>
 
         <!-- ============ QUALIFICATION ============ -->
-        <section class="qualification section">
+        <section class="qualification section" id="qualification">
 
             <h2 class="section__title">Qualification</h2>     
             <span class="section__subtitle">My personal journey</span>
@@ -514,7 +517,7 @@
         </section>
 
         <!-- ============ Services ============ -->
-        <section class="services">
+        <section class="services" id="services">
             <h2 class="section__title">Service</h2>
             <span class="section__subtitle">What i offer</span>
 
@@ -911,6 +914,7 @@
             </div>
         </section>
     </main>
+
     <footer class="footer">
         <div class="footer__bg">
             <div class="footer_container container grid">
@@ -949,7 +953,11 @@
             <p class="footer__copy">&#169; Bedimcode. All right reserved</p>
         </div>
     </footer>
+    <!-- =====Scroll top =====-->
 
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
 
     <!-- ============ Script ============ -->
     <script src="swiper-bundle.min.js"></script>
