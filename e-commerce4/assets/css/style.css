@@ -249,9 +249,7 @@
 {
     background-color: var(--dark-lead-hover);
 }
-
-.go-down-btn
-{
+.go-down-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -265,23 +263,28 @@
     background-color: green;
 }
 
-.go-down-btn:hover
-{
+.go-down-btn:hover {
     transform: scale(1.1);
 }
 
-
-.go-down-btn .icon
-{
+.go-down-btn .icon {
     font-size: var(--font-size-2);
 }
 
-.go-down-btn .circle-next
-{
+.go-down-btn .circle-text {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color:rgba(255, 0, 0, .19) ;
+    background-color: rgba(255, 0, 0, .19);
+}
+
+.go-down-btn .circle-text span {
+    position: relative;
+    font-size: calc(var(--font-size-1) / 1.3);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: 0 45px;
 }
 /* ============= END Home SECTION ============= */
 

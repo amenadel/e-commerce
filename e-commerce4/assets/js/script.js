@@ -33,6 +33,14 @@ function changeHeaderBg()
 
 /* Circle Btn */
 
+    circleBtn = document.querySelector(".go-down-btn"),
+    circleText = circleBtn.querySelector(".circle-text");
+circleText.innerHTML = circleText.textContent
+  .split("")
+  .map((char, index) => `<span style="transform: rotate(${index * 28.3}deg)">${char}</span>`)
+  .join("");
+
+
 
 
 /* ============== New Section ============== */
