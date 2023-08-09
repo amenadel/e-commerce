@@ -67,11 +67,64 @@ circleText.innerHTML = circleText.textContent
 
 /* ============== New Section ============== */
 
-
     /* Swiper JS */
-   
+    async function renderNewProducts()
+    {
+        const respone = await fetch(API_URL);
+        const data = await respone.json();
+        data.map((product) => {
+            if (product.isNew) {
+                newContent.innerHTML += ProductCard(product);
+            }
+        });
+        const productCards = newContent.querySelectorAll(".product-card");
+        productCards.forEach((product) => {
+            product.classList.add("new__product");
+            const image = product.querySelector("img");
+            product.addEventListener("mouseover", () => {
+                if (product.dataset.image2 != "undefined") {
+                    image.src = product.dataset.image2;
+                }
+            });
+            product.addEventListener("mouseleave", () => {
+                image.src = product.dataset.image1;
+            });
+        });
+    } 
+    
+    /*Swiper*/
+
+    const newSwiper = new Swiper(".new__content", {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        loop: true,
+        grabCursor: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            992: {
+                slidesPerView: 3,
+            },
+            1200: {
+                slidesPerView: 4,
+            },
+        },
+    })
 
     /* ScrollReveal JS */
+    sr.reveal(newContent);
+
+   
+
+
   
 
 /* ============== Shop Section ============== */
@@ -105,16 +158,16 @@ function activeScroll()
 
 /* ============== Scroll Up ============== */
 
-function showScrollUpBtn() 
-{
-}
-
-
-/* ============== Call functions ============== */
-
-
-window.addEventListener("scroll", () => {});
+window.addEventListener("scroll", () => {
+    activeScroll();
+    changeHeaderBg();
+    showScrollUpBtn();
+});
 
 window.addEventListener("load", () => {
-    document.querySelector(".home__slide").classList.add("reveal")
-})
+    activeScroll();
+    renderNewProducts();
+    renderShopProducts();
+    renderTrendingProducts();
+    document.querySelector(".home__slide").classList.add("reveal");
+});
