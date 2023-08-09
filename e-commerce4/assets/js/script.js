@@ -122,21 +122,63 @@ circleText.innerHTML = circleText.textContent
     /* ScrollReveal JS */
     sr.reveal(newContent);
 
-   
-
-
-  
 
 /* ============== Shop Section ============== */
+async function renderShopProducts() {
+    const respone = await fetch(API_URL);
+    const data = await respone.json();
+    data.map((product) => {
+        shopContent.innerHTML += ProductCard(product);
+    });
+    const productCards = shopContent.querySelectorAll(".product-card");
+    productCards.forEach((product) => {
+        product.classList.add("shop__product");
+        const image = product.querySelector("img");
+        product.addEventListener("mouseover", () => {
+            if (product.dataset.image2 != "undefined") {
+                image.src = product.dataset.image2;
+            }
+        });
+        product.addEventListener("mouseleave", () => {
+            image.src = product.dataset.image1;
+        });
+    });
 
-
-
+    /* ScrollReveal JS */
+    sr.reveal(".shop__product", { interval: 100 });
+}
 
 /* Shop categories */
-
-
+shopCategories.forEach((category) => {
+    category.addEventListener("click", () => {
+        shopCategories.forEach((category) => category.classList.remove("selected"));
+        category.classList.add("selected");
+        let categoryType = category.dataset.category;
+        const shopProducts = document.querySelectorAll(".shop__product");
+        shopProducts.forEach((product) => {
+            product.classList.add("hide");
+            if (product.dataset.category === categoryType || categoryType === "all") {
+                product.classList.remove("hide");
+            }
+        });
+    });
+});
 /* ============== Trending Section ============== */
 
+async function renderTrendingProducts()
+{
+    const respone = await fetch(API_URL);
+    const data = await respone.json();
+    data.map(product => {
+        if(product.isTrending){
+            trendingContent.innerHTML += TrendingCard(product)
+        }
+    })
+}
+
+/*Swiper*/
+
+const trendingSectionSwiper = new Swiper("")
 
 
 /* ============== Brands Section ============== */
