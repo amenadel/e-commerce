@@ -178,7 +178,21 @@ async function renderTrendingProducts()
 
 /*Swiper*/
 
-const trendingSectionSwiper = new Swiper("")
+const trendingSectionSwiper = new Swiper(".trending__content", {
+    loop: true,
+    effect: "fade",
+    speed: 600,
+    allowTouchMove: false,
+    autoplay:
+    {
+        delay: 6000,
+        
+    }
+
+
+
+
+})
 
 
 /* ============== Brands Section ============== */
