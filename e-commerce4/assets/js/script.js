@@ -23,7 +23,13 @@ navBtn.addEventListener("click", () => document.body.classList.toggle("menu-togg
 
 function changeHeaderBg()
 {
-    
+    const scrollY = window.scrollY;
+    if(scrollY > 100)
+    {
+        navBar.style.backgroundColor = 'var(--white-100-opcty-212)'
+    } else {
+        navBar.style.backgroundColor = 'transparent'
+    }
 }
 
 
@@ -210,9 +216,36 @@ const trendingSectionSwiper = new Swiper(".trending__content", {
 
 function activeScroll()
 {
+    const scrollY = window.scrollY;
+    sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 16,
+        sectionHeight = section.offsetHeight,
+        link = document.querySelector(`.header__link a[href='#${section.id}'`);
+        if (scrollY >= sectionTop && scrollY <= sectionHeight + sectionTop) {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
+
+    })
 }
 
 /* ============== Scroll Up ============== */
+
+function showScrollUpBtn()
+{
+    if(window.scrollY > 300)
+    {
+        scrollUpBtn.classList.add("show")
+    }
+    else
+    {
+        scrollUpBtn.classList.remove("show")
+    }
+
+    scrollUpBtn.addEventListener("click", () => window.scrollTo({behavior: "smooth", top:0, left: 0}))
+}
+
 
 window.addEventListener("scroll", () => {
     activeScroll();

@@ -69,7 +69,8 @@
     transition: all var(--default-duration) ease;
 }
 
-.header__link a:hover::after
+.header__link a:hover::after,
+.header__link a.active::after
 {
     bottom: -5px;
     opacity: 1;
@@ -812,11 +813,48 @@
 .footer__copyRight span
 {
     color: var(--dark-lead);
+    font-weight: var(--font-semi-bold);
+}
+
+@media screen and (max-width: 584px)
+{
+    .footer__container{
+        justify-content: center;
+    }
 }
 
 
 /* ============= END FOOTER ============= */
 
 /* ============= SCROLL UP ============= */
+
+.scroll-up
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: calc(var(--padding-1) / 2);
+    position: fixed;
+    bottom: 0px;
+    right: 20px;
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+    transition: all var(--default-duration) ease;
+}
+
+.scroll-up:hover
+{
+    background-color: black;
+    color: azure;
+}
+
+.scroll-up.show
+{
+    bottom: 40px;
+    opacity: 1;
+    pointer-events: all;
+    z-index: 500;
+}
 
 
