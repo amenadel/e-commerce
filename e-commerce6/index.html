@@ -11,7 +11,7 @@
   <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
 
   <!---custom css link-->
-  <link rel="stylesheet" href="./assets/css/style-prefix.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 
   <!--google font link-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,6 +21,174 @@
 
 </head>
 <body>
+  <div class="overlay" data-overlay></div>
+
+  <!--Modal-->
   
+  <div class="modal closed" data-modal>
+    
+
+    <!--- Modal -->
+    <div class="modal-close-overlay"></div>
+
+
+    <div class="modal-content">
+      <button class="modal-close-btn" data-modal-overlay>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="newsletter-img">
+        <img src="./assets/images/newsletter.png" alt="subcribe newsletter" width="400" height="400">
+      </div>
+
+      <div class="newsletter">
+        <div class="newsletter-header">
+          <h3 class="newsletter-title">Subscribe Newsletter</h3>
+
+          <p class="newsletter-desc">
+            Subscribe the <b>Anon</b> to get latest products and discount update.
+          </p>
+        </div>
+
+        <input type="email" name="email" class="email-field" placeholder="Email Addres" required>
+
+        <button type="submit" class="btn-newsletter">Subscribe</button>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- notificaiton toast-->
+
+  <div class="notification-toast closed" data-toast>
+    <button class="toast-close-btn" data-toast-close>
+      <ion-icon name="close-outline"></ion-icon>
+    </button>
+
+    <div class="toast-banner">
+      <img src="assets/images/products/jewellery-1.jpg" alt="rose gold Earrings" width="80" height="70">
+
+    </div>
+
+    <div class="toast-detail">
+      
+      <p class="toast-message">
+        Someone in new just bought
+      </p>
+
+      <p class="toast-title">
+        Rose Gold Earrings
+      </p>
+
+      <p class="toast-meta">
+        <time datetime="PT2M"> 2 Minutes</time> ago
+      </p>
+
+    </div>
+  </div>
+
+  <!--
+    - Header
+  -->
+
+  <header>
+    <div class="header-top">
+      <div class="container">
+        <ul class="header-social-container">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          
+          
+        </ul>
+
+        <div class="header-alert-news">
+          <p>
+            <b>free Shipping</b>
+            this Week Order Over - %55
+          </p>
+        </div>
+
+        <div class="header-top-actions">
+          <select name="currency" id="">
+            <option value="usd">USD &dollar;</option>
+            <option value="eur">EUR &euro;</option>
+          </select>
+
+          <select name="language" id="">
+            <option value="en-US">English</option>
+            <option value="es-ES">Spanish</option>
+            <option value="pt-PT">Portuguese</option>
+          </select>
+
+
+        </div>
+
+        <div class="header-main">
+          <div class="container">
+            <a href="#" class="header-logo">
+              <img src="assets/images/logo/logo.svg" alt="Anon's logo" width="120" height="36">
+            </a>
+
+            <div class="header-search-conteiner">
+              <input type="search" name="seach" class="search-field" placeholder="Enter your product name...">
+              <button class="search-btn">
+                <ion-icon name="search-outline"></ion-icon>
+              </button>
+            </div>
+
+            <div class="header-user-actions">
+              <button class="action-btn">
+                <ion-icon name="person-outline"></ion-icon>
+              </button>
+
+              <button class="action-btn">
+                <ion-icon name="person-outline"></ion-icon>
+              </button>
+              <button class="action-btn">
+                <ion-icon name="heart-outline"></ion-icon>
+              </button>
+            </div>
+          </div>
+
+          
+        </div>
+
+
+      </div>
+    </div>
+  </header>
+
+
+
+
+
+
+
+  <!-- script js link -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--icons link-->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
