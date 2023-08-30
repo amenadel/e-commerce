@@ -14,4 +14,4 @@ const modalCloseFunc =  function () { modal.classList.add(closed)}
 //modal EventListenner
 
 modalCloseOverlay.addEventListener('click', modalCloseFunc);
-modalCloseBtn.addEventListener('click', modalCloseFunc)
+modalCloseBtn.addEventListener('click', modalCloseFunc);

@@ -127,6 +127,13 @@
   
   body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
 
+  /*-----------------------------------*\
+               #reused style
+  \*-----------------------------------*/
+  .container{padding: 0 15px;}
+
+
+
    /*-----------------------------------*\
                     Main
   \*-----------------------------------*/
@@ -374,4 +381,126 @@
   {
     font-size: var(--fs-1);
     color: var(--sonic-silver);
+  }
+
+
+  /**********\
+    HEADER
+  \**********/
+
+  .header-top,
+  .header-user-actions,
+  .desktop-navigation-menu
+  {
+    display: none;
+  }
+
+  .header-main
+  {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--cultured);
+  }       
+  
+  .header-logo
+  {
+    margin-bottom: 20px;
+  }
+
+  .header-logo
+  {
+    margin-bottom: 20px;
+  }
+
+  .header-logo img
+  {
+    margin: auto;
+  }
+
+  .header-search-container
+  {
+    position: relative;
+  }
+
+  .header-search-container .search-field
+  {
+    font-size: var(--fs-7);
+    color: var(--onyx);
+    padding: 10px 15px;
+    padding-right: 50px;
+    border: 1px solid var(--cultured);
+    border-radius: var(--border-radius-md);
+  }
+
+  .search-field::-webkit-search-cancel-button { display: none;}
+
+  .search-btn
+  {
+    background: var(--white);
+    position: absolute;
+    top:50%;
+    right: 2px;
+    transform: translatey(-50%);
+    color: var(--onyx);
+    font-size: 19px;
+    padding:0 18px;
+    transition: .3s ease-in-out;
+  }
+
+  .search-btn:hover{ color: var(--salmon-pink);}
+
+  .mobile-bottom-navigation
+  {
+    background: var(--white);
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    box-shadow: 0 0 10px hsla(0, 0%, 0%, .25);
+    z-index: 5;
+  }
+
+
+  .mobile-bottom-navigation .action-btn
+  {
+    position: relative;
+    font-size: 26px;
+    color: var(--eerie-black);
+    padding: 10px;
+  }
+
+  .mobile-bottom-navigation .count {
+    background: var(--bittersweet);
+    color: var(--white);
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+    font-weight: var(--weight-500);
+    line-height: 1;
+    padding: 2px 4px;
+    border-radius: 20px;
+  }
+
+  .mobile-navigation-menu {
+    background: var(--white);
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    max-width: 320px;
+    height: 100vh;
+    padding: 20px;
+    box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.1);
+    overflow-y: scroll;
+    overscroll-behavior: contain;
+    visibility: hidden;
+    transition: 0.5s ease;
+    z-index: 20;
   }
