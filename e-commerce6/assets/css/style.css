@@ -105,7 +105,12 @@
   
   input::placeholder { font: inherit; }
   
-  body { background: var(--white); }
+  body 
+  {
+    background: var(--white);
+    padding-bottom: 60px;
+
+  }
   
   /**
    * scrollbar style
@@ -747,6 +752,44 @@
 }
 
 .category-img-box
+{
+  background: var(--cultured);
+  border: 1px solid hsl(0, 0%, 80%);
+  padding: 10px;
+  border-radius: var(--border-radius-sm);
+}
+
+.category-content-box { width: 100%; }
+
+.category-content-flex
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.category-item-title
+{
+  color: var(--eerie-black);
+  font-size: var(--fs-9);
+  font-weight:  var(--weight-600);
+  text-transform: uppercase;
+}
+
+.category-item-amount 
+{
+  color: var(--sonic-silver);
+  font-size: var(--fs-11);
+}
+
+.category-btn
+{
+  color: var(--salmon-pink);
+  font-size: var(--fs-9);
+  font-weight: var(--weight-500);
+  text-transform: capitalize;
+}
 
 
   
