@@ -227,11 +227,11 @@ input {
 
 .nav__log-img
 {
-  width: 150px;
+  width: 120px;
 }
 
 .nav__menu{
-  width: 100%;
+  flex-grow: 1;
   margin-left: 2.5rem;
 }
 
@@ -277,7 +277,7 @@ input {
 }
 
 .header__action-btn img{
-  width: 30px;
+  width: 24px;
 }
 .header__action-btn .count {
   position: absolute;
@@ -731,12 +731,90 @@ input {
   color: var(--first-color);
 }
 /*=============== NEW ARRIVALS ===============*/
-  .new__arrivals{
+  .new__arrivals {
     overflow: hidden;
   }
 /*=============== SHOWCASE ===============*/
+ .showcase__container{
+  grid-template-columns: repeat(4, 1fr);
+ }
+ .showcase__wrapper .section__title {
+  font-size: var(--normal-font-size);
+  border-bottom: 1px solid var(--border-color-alt);
+  padding-bottom: .75rem;
+  margin-bottom: 2rem;
+  position: relative;
+ }
+
+ .showcase__wrapper .section__title::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1.3px;
+  width: 50px;
+  height: 2px;
+  background-color: var(--first-color);
+ }
+
+ .showcase__item{
+  display: flex;
+  align-items: center;
+  column-gap: 1.5rem;
+ }
+
+ .showcase__item:not(:last-child){
+    margin-bottom: 1.5rem;
+ }
+
+ .showcase__img{
+  width: 86px;
+ }
+
+
+ .showcase__content {
+  width: calc(100% - 110px)
+ }
+
+ .showcase__title {
+  font-size: var(--small-font-size);
+  font-weight: var(--weight-500);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0.5rem;
+ }
 
 /*=============== NEWSLETTER ===============*/
+ .newsletter{
+  background-color: hsl(166, 23%, 74%);
+ }
+
+ .home__newsletter{
+  margin-top: 2rem;
+ }
+
+
+ .newsletter__container {
+  grid-template-columns: repeat(2, 3.5fr) 5fr;
+  align-items: center;
+  column-gap: 3rem;
+ }
+
+.newsletter__title{
+  column-gap: 1rem;
+  font-size: var(--large-font-size);
+}
+
+.newsletter__icon {
+  width: 40px;
+}
+
+.newsletter__description{
+  color: var(--title-color);
+  font-family: var(--second-font);
+  font-size: var(--small-font-size);
+  font-weight: var(--weight-600);
+}
 
 /*=============== FOOTER ===============*/
 
