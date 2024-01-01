@@ -157,11 +157,7 @@ table{
 }
 
 
-.flex{
-  display: flex;
-  align-items: center;
-  column-gap: .5rem;
-}
+
 
 .new__price
 {
@@ -173,6 +169,20 @@ table{
   color: var(--text-color-light);
   font-size: var(--small-font-size);
   text-decoration: line-through;
+}
+form{
+  row-gap: 1rem;
+}
+
+.form__group{
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1r
+  em;
+}
+.textarea{
+  height: 200px;
+  padding-block: 1rem;
+  resize: none;
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -370,6 +380,12 @@ table{
 .btn--sm{
   height: 40px;
   line-height: 36px;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+  column-gap: .5rem;
 }
 
 /*=============== CATEGORIES ===============*/
@@ -1190,6 +1206,7 @@ table{
 
 .review__title{
   font-size: var(--tiny-font-size);
+  text-align: center;
 }
 
 .review__data{
@@ -1210,7 +1227,110 @@ table{
   font-size: var(--small-font-size);
 }
 
+.review__form-title {
+  font-size: var(--large-font-size);
+  margin-bottom: 1rem;
+}
+
+.rate__product{
+  margin-bottom: 2rem;
+}
+
 /*=============== CART ===============*/
+
+.table__container{
+  overflow-x: auto;
+}
+
+.table {
+  table-layout: fixed;
+  margin-bottom: 2rem;
+}
+
+.table tr{
+  border-top: 1px solid var(--border-color-alt) ;
+}
+
+
+.table tr:last-child{
+  border-bottom: 1px solid var(--border-color-alt);
+}
+
+.table tr th:nth-child(1),
+.table tr td:nth-child(1){
+  width: 216px;
+}
+
+.table tr th:nth-child(2),
+.table tr td:nth-child(2){
+  width: 400px;
+}
+
+.table tr th:nth-child(3),
+.table tr td:nth-child(3){
+  width: 108px;
+}
+
+.table tr th:nth-child(4),
+.table tr td:nth-child(4){
+  width: 220px;
+}
+
+
+.table tr th:nth-child(5),
+.table tr td:nth-child(5){
+  width: 200px;
+}
+
+.table tr th:nth-child(6),
+.table tr td:nth-child(6){
+  width: 152px;
+}
+
+.table__img{
+  width: 80px;
+}
+
+.table tr th,
+.table tr td {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.table__title,
+.table__description,
+.table__price,
+.table__subtotal,
+.table__trash {
+  font-size: var(--small-font-size);
+}
+
+.table__title {
+  color: var(--first-color);
+}
+
+.table__description {
+  max-width: 250px;
+  margin-inline: auto;
+}
+
+.table__trash{
+  color: var(--text-color-light);
+}
+
+.cart__actions{
+  display: flex;
+  justify-content: flex-end;
+  gap: .75rem;
+  margin-top: 1.5rem;
+}
+
+
+
+
+
+
+
 
 /*=============== CART OTHERS ===============*/
 
